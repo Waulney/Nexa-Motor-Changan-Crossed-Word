@@ -27,19 +27,19 @@ const I18N = {
     }
 };
 
-// 20 Niveaux riches de 6 mots courts chacun, adaptés pour la grille 10x10 (Français et Anglais)
+// 20 Niveaux entièrement corrigés (mots complets et naturels en FR et EN)
 const LEVELS = [
     {
         title: { fr: "Niveau 1 : Motorisation & Moteur", en: "Level 1: Engine & Powertrain" },
-        words: { fr: ["TURBO", "PISTON", "HUILE", "FILTRE", "BOUGE", "MOTEUR"], en: ["TURBO", "PISTON", "OIL", "FILTER", "SPARK", "MOTOR"] }
+        words: { fr: ["TURBO", "PISTON", "HUILE", "FILTRE", "BOUGIE", "MOTEUR"], en: ["TURBO", "PISTON", "OIL", "FILTER", "SPARK", "MOTOR"] }
     },
     {
         title: { fr: "Niveau 2 : Transmission & Boîte", en: "Level 2: Transmission & Gearbox" },
-        words: { fr: ["BOITE", "VITTE", "DISQUE", "EMBRA", "LEVIER", "PONT"], en: ["GEAR", "SPEED", "DISC", "CLUTCH", "LEVER", "AXLE"] }
+        words: { fr: ["BOITE", "VITESSE", "DISQUE", "EMBRAYAGE", "LEVIER", "PONT"], en: ["GEAR", "SPEED", "DISC", "CLUTCH", "LEVER", "AXLE"] }
     },
     {
         title: { fr: "Niveau 3 : Châssis & Suspension", en: "Level 3: Chassis & Suspension" },
-        words: { fr: ["RESSO", "AMORTI", "FREIN", "DISQUE", "PNEU", "ROUE"], en: ["SPRING", "SHOCK", "BRAKE", "DISC", "TIRE", "WHEEL"] }
+        words: { fr: ["RESSORT", "AMORTI", "FREIN", "DISQUE", "PNEU", "ROUE"], en: ["SPRING", "SHOCK", "BRAKE", "DISC", "TIRE", "WHEEL"] }
     },
     {
         title: { fr: "Niveau 4 : Électricité & Batterie", en: "Level 4: Electricity & Battery" },
@@ -47,11 +47,11 @@ const LEVELS = [
     },
     {
         title: { fr: "Niveau 5 : Software & Écran", en: "Level 5: Software & Display" },
-        words: { fr: ["ECRAN", "TACTI", "MENU", "RADIO", "GPS", "DATA"], en: ["SCREEN", "TOUCH", "MENU", "RADIO", "GPS", "DATA"] }
+        words: { fr: ["ECRAN", "TACTILE", "MENU", "RADIO", "GPS", "DATA"], en: ["SCREEN", "TOUCH", "MENU", "RADIO", "GPS", "DATA"] }
     },
     {
         title: { fr: "Niveau 6 : Sécurité & Airbags", en: "Level 6: Safety & Airbags" },
-        words: { fr: ["AIR", "BAG", "ALARM", "RADAR", "CAM", "ALERTE"], en: ["AIR", "BAG", "ALARM", "RADAR", "CAM", "ALERT"] }
+        words: { fr: ["AIR", "BAG", "ALARME", "RADAR", "CAMERA", "ALERTE"], en: ["AIR", "BAG", "ALARM", "RADAR", "CAM", "ALERT"] }
     },
     {
         title: { fr: "Niveau 7 : Confort & Intérieur", en: "Level 7: Comfort & Interior" },
@@ -59,7 +59,7 @@ const LEVELS = [
     },
     {
         title: { fr: "Niveau 8 : Carrosserie & Design", en: "Level 8: Body & Design" },
-        words: { fr: ["PORTE", "CAPOT", "AILE", "CALAND", "COFFRE", "PEINT"], en: ["DOOR", "HOOD", "FENDER", "GRILLE", "TRUNK", "PAINT"] }
+        words: { fr: ["PORTE", "CAPOT", "AILE", "CALANDRE", "COFFRE", "PEINTURE"], en: ["DOOR", "HOOD", "FENDER", "GRILLE", "TRUNK", "PAINT"] }
     },
     {
         title: { fr: "Niveau 9 : Gamme Changan SUV", en: "Level 9: Changan SUV Lineup" },
@@ -67,27 +67,27 @@ const LEVELS = [
     },
     {
         title: { fr: "Niveau 10 : Électrification & EV", en: "Level 10: Electrification & EV" },
-        words: { fr: ["LITHI", "WATT", "BORNE", "ECO", "HYBRD", "VOLT"], en: ["LITHIUM", "WATT", "PLUG", "ECO", "HYBRID", "VOLT"] }
+        words: { fr: ["LITHIUM", "WATT", "BORNE", "ECO", "HYBRIDE", "VOLT"], en: ["LITHIUM", "WATT", "PLUG", "ECO", "HYBRID", "VOLT"] }
     },
     {
         title: { fr: "Niveau 11 : Performance & Route", en: "Level 11: Performance & Road" },
-        words: { fr: ["ROUTE", "VITES", "COURS", "LIGNE", "FREIN", "TEST"], en: ["ROAD", "SPEED", "RACE", "LINE", "BRAKE", "TEST"] }
+        words: { fr: ["ROUTE", "VITESSE", "COURSE", "LIGNE", "FREIN", "TEST"], en: ["ROAD", "SPEED", "RACE", "LINE", "BRAKE", "TEST"] }
     },
     {
         title: { fr: "Niveau 12 : Connectivité & Apps", en: "Level 12: Connectivity & Apps" },
-        words: { fr: ["BLU", "WIFI", "SYNC", "CLOUD", "APP", "PORT"], en: ["BLUE", "WIFI", "SYNC", "CLOUD", "APP", "PORT"] }
+        words: { fr: ["BLEU", "WIFI", "SYNC", "CLOUD", "APPLI", "PORT"], en: ["BLUE", "WIFI", "SYNC", "CLOUD", "APP", "PORT"] }
     },
     {
         title: { fr: "Niveau 13 : Entretien & Atelier", en: "Level 13: Maintenance & Workshop" },
-        words: { fr: ["ATEL", "OUTIL", "CLE", "VALI", "VIS", "TEST"], en: ["SHOP", "TOOL", "KEY", "SCAN", "SCREW", "TEST"] }
+        words: { fr: ["ATELIER", "OUTIL", "CLE", "VALISE", "VIS", "TEST"], en: ["SHOP", "TOOL", "KEY", "SCAN", "SCREW", "TEST"] }
     },
     {
         title: { fr: "Niveau 14 : Direction & Contrôle", en: "Level 14: Steering & Control" },
-        words: { fr: ["VOLAN", "DIRECTION", "PEDAL", "FREIN", "GAZ", "PARK"], en: ["WHEEL", "STEER", "PEDAL", "BRAKE", "GAS", "PARK"] }
+        words: { fr: ["VOLANT", "DIRECTION", "PEDALE", "FREIN", "GAZ", "PARK"], en: ["WHEEL", "STEER", "PEDAL", "BRAKE", "GAS", "PARK"] }
     },
     {
         title: { fr: "Niveau 15 : Éclairage LED & Optiques", en: "Level 15: LED Lighting & Optics" },
-        words: { fr: ["FEUX", "LEDS", "NEON", "BOULB", "FLASH", "RAYON"], en: ["LIGHT", "LEDS", "NEON", "BULB", "FLASH", "BEAM"] }
+        words: { fr: ["FEUX", "LEDS", "NEON", "AMPOULE", "FLASH", "RAYON"], en: ["LIGHT", "LEDS", "NEON", "BULB", "FLASH", "BEAM"] }
     },
     {
         title: { fr: "Niveau 16 : Matériaux & Finitions", en: "Level 16: Materials & Finishes" },
@@ -95,7 +95,7 @@ const LEVELS = [
     },
     {
         title: { fr: "Niveau 17 : Climatisation & Air", en: "Level 17: Air Conditioning" },
-        words: { fr: ["AIR", "VENTI", "CHAUD", "FROID", "FILTR", "BUEE"], en: ["AIR", "BLOW", "HOT", "COLD", "FILTER", "MIST"] }
+        words: { fr: ["AIR", "VENTIL", "CHAUD", "FROID", "FILTRE", "BUEE"], en: ["AIR", "BLOW", "HOT", "COLD", "FILTER", "MIST"] }
     },
     {
         title: { fr: "Niveau 18 : Sécurité Active", en: "Level 18: Active Safety" },
@@ -103,7 +103,7 @@ const LEVELS = [
     },
     {
         title: { fr: "Niveau 19 : Service Client & Vente", en: "Level 19: Customer Service & Sales" },
-        words: { fr: ["CLIENT", "VENTE", "OFFRE", "PRIX", "DEVIS", "GARAN"], en: ["CLIENT", "SALES", "OFFER", "PRICE", "QUOTE", "WARRANT"] }
+        words: { fr: ["CLIENT", "VENTE", "OFFRE", "PRIX", "DEVIS", "GARANT"], en: ["CLIENT", "SALES", "OFFER", "PRICE", "QUOTE", "WARRANT"] }
     },
     {
         title: { fr: "Niveau 20 : Nexa & Changan Ultime", en: "Level 20: Ultimate Nexa & Changan" },
